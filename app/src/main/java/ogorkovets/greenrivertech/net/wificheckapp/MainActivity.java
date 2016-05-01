@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.graphics.Color;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -46,10 +47,11 @@ public class MainActivity extends Activity {
             btnSrc.setTextColor(Color.parseColor("grey"));
             btnSrc.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, OtherActivity.class);
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=pUylKKhql2E")));
+                    Toast.makeText(getApplicationContext(), "WiFi has to be ON",
+                            Toast.LENGTH_LONG).show();
                 }
             });
+
         }
 
 
